@@ -2,7 +2,7 @@ resource "aws_key_pair" "eks" {
   key_name   = "eks"
   # you can paste the public key directly like this
   #public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL6ONJth+DzeXbU3oGATxjVmoRjPepdl7sBuPzzQT2Nc sivak@BOOK-I6CR3LQ85Q"
-  public_key = file("~/.ssh/eks.pub")
+  public_key = file("~/.ssh/github.pub")
   # ~ means windows home directory
 }
 
@@ -13,7 +13,7 @@ module "eks" {
   cluster_name    = "${var.project_name}-${var.environment}"
   cluster_version = "1.30"
   # it should be false in PROD environments
-  cluster_endpoint_public_access = true
+  cluster_endpoint_public_access = true 
 
   vpc_id                   = local.vpc_id
   subnet_ids               = split(",", local.private_subnet_ids)

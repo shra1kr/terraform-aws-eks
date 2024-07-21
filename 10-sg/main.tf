@@ -59,6 +59,7 @@ module "vpn" {
   ingress_rules = var.vpn_sg_rules
 }
 
+# Bastion accessed from public/Devops Team
 resource "aws_security_group_rule" "bastion_public" {
   type              = "ingress"
   from_port         = 22

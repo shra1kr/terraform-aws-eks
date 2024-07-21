@@ -16,9 +16,9 @@ variable "common_tags" {
 }
 
 variable "zone_name" {
-  default = "daws78s.online"
+  default = "shravan.cloud"
 }
 
 variable "zone_id" {
-  default = "Z08884492QFPW45HM4UQO"
+  default = "Z0300022NU5KWUM4EAW3"
 }
